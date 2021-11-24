@@ -6,6 +6,7 @@ void main(){
     printf("Enter two numbers to add:");
     scanf("%d%d",&a,&b);
     *p=*p+*q;
-    printf("SUM = %d");
+    printf("SUM = %d\n");
+    printf("Address of Sum = %u",p);
     getch();
 }
