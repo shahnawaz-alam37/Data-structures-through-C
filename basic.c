@@ -7,6 +7,7 @@ void main(){
     scanf("%d%d",&a,&b);
     *p=*p+*q;
     printf("SUM = %d\n");
-    printf("Address of Sum = %u",p);
+    printf("Address of Sum = %u\n",p);
+    printf("addres of first digit = %u",&a);
     getch();
 }
