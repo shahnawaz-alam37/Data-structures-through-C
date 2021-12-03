@@ -2,7 +2,7 @@
 #include<stdio.h>
 int main(){
     //==========insertion sort===========
-    int temp,n,i,j,a[20];
+    int key,n,i,j,a[20];
     printf("Enter the no.of elements you want to enter:");
     scanf("%d",&n);
     printf("Enter the elements\n");
@@ -12,21 +12,18 @@ int main(){
     }
     for (i = 1; i < n; i++)
     {
-        j=i;
-        while (j>=1)
+        key=a[i];
+        j=i-1;
+        while (j>=0 && a[j]>key)
         {
-            if (a[j]<a[j-1])
-            {
-                temp=a[j];
-                a[j]=a[j-1];
-                a[j-1]=temp;
-            }
+            a[j+1]=a[j];
             j=j-1;
         }
+        a[j+1]=key;
     }
     printf("printing the sorted elements\n");
     for (i = 0; i < n; i++)
     {
-        printf("%d",a[i]);
+        printf("%d ",a[i]);
     }   
 }
