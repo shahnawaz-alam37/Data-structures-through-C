@@ -1,6 +1,9 @@
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h>
+void display();
+void append();
+int length();
 struct node
 {
     int data;
@@ -17,7 +20,8 @@ int main(){
         printf("1.append\n");
         printf("2.insert at begin\n");
         printf("3.Total length\n");
-        printf("4.EXIT\n");
+        printf("4.display\n");
+        printf("5.EXIT\n");
         printf("enter your choice:");
         scanf("%d",&opt);
         switch (opt)
@@ -27,7 +31,11 @@ int main(){
         case 3:len = length();
             getch();
             break;
-        case 4:printf("\nterminating program\n");getch();
+        case 4:display();
+            getch();
+            break;
+        case 5:
+            printf("\nterminating program\n");getch();
         exit(1);
         default:
             break;
@@ -69,4 +77,19 @@ int length(){
     }
     printf("\nTOTAL NO. OF NODES ARE %d\n",count);
     return count;
+}
+void display(){
+    struct node *temp;
+    temp=root;
+    if (temp==NULL){
+        printf("\nlist is empty\n");
+    }
+    else{
+        while(temp->link!=NULL){
+            printf("%d-->",temp->data);
+            temp = temp->link;
+        }
+        printf("\n\n");
+    }
+
 }
