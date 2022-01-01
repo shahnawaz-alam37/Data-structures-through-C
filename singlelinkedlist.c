@@ -17,24 +17,23 @@ int main(){
     {
         system("cls");
         printf("SINGLE LINKED LIST\n");
-        printf("1.append\n");
-        printf("2.insert at begin\n");
-        printf("3.Total length\n");
-        printf("4.display\n");
-        printf("5.EXIT\n");
+        printf("1.Append\n");
+        printf("2.Total length\n");
+        printf("3.display\n");
+        printf("4.EXIT\n");
         printf("enter your choice:");
         scanf("%d",&opt);
         switch (opt)
         {
         case 1:append();
             break;
-        case 3:len = length();
+        case 2:len = length();
             getch();
             break;
-        case 4:display();
+        case 3:display();
             getch();
             break;
-        case 5:
+        case 4:
             printf("\nterminating program\n");getch();
         exit(1);
         default:
@@ -85,7 +84,7 @@ void display(){
         printf("\nlist is empty\n");
     }
     else{
-        while(temp->link!=NULL){
+        while(temp!=NULL){
             printf("%d-->",temp->data);
             temp = temp->link;
         }
