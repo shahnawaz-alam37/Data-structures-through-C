@@ -4,6 +4,7 @@
 void display();
 void append();
 int length();
+void delete();
 struct node
 {
     int data;
@@ -20,7 +21,8 @@ int main(){
         printf("1.Append\n");
         printf("2.Total length\n");
         printf("3.display\n");
-        printf("4.EXIT\n");
+        printf("4.Delete\n");
+        printf("5.EXIT\n");
         printf("enter your choice:");
         scanf("%d",&opt);
         switch (opt)
@@ -33,7 +35,9 @@ int main(){
         case 3:display();
             getch();
             break;
-        case 4:
+        case 4: delete();
+            break;
+        case 5:
             printf("\nterminating program\n");getch();
         exit(1);
         default:
@@ -90,5 +94,36 @@ void display(){
         }
         printf("\n\n");
     }
-
+}
+void delete(void){
+    struct node * temp;
+    int loc,len;
+    printf("enter loc to be delete:");
+    scanf("%d",&loc);
+    len = length();
+    if (loc>len)
+    {
+        printf("invalid location \n");
+    }
+    else if (loc==1)
+    {
+        temp=root;
+        root=temp->link;
+        temp->link=NULL;
+        free(temp);
+    }
+    else
+    {
+        struct node * p=root,*q;
+        int i=1;
+        while(i<loc-1)
+        {
+            p=p->link;
+            i++;
+        }
+        q= p->link;
+        p->link = q->link;
+        q->link=NULL;
+        free(q);
+    }
 }
