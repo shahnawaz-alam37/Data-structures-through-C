@@ -5,6 +5,7 @@ void display();
 void append();
 int length();
 void delete();
+void reverse();
 struct node
 {
     int data;
@@ -22,7 +23,8 @@ int main(){
         printf("2.Total length\n");
         printf("3.display\n");
         printf("4.Delete\n");
-        printf("5.EXIT\n");
+        printf("5.reverse list\n");
+        printf("6.EXIT\n");
         printf("enter your choice:");
         scanf("%d",&opt);
         switch (opt)
@@ -37,7 +39,9 @@ int main(){
             break;
         case 4: delete();
             break;
-        case 5:
+        case 5:reverse(root);
+            break;
+        case 6:
             printf("\nterminating program\n");getch();
         exit(1);
         default:
@@ -126,4 +130,16 @@ void delete(void){
         q->link=NULL;
         free(q);
     }
+}
+void reverse(struct node *p)
+{
+    struct node *q=NULL,*r=NULL;
+    while(p!=NULL)
+    {
+        r=q;
+        q=p;
+        p=p->link;
+        q->link=r;
+    } 
+    root=q;
 }
