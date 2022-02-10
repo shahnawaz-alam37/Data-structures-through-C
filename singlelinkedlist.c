@@ -17,7 +17,7 @@ int main(){
     int opt;
     for(;;)
     {
-        system("cls");
+        system("cls");//this is optional.
         printf("SINGLE LINKED LIST\n");
         printf("1.Append\n");
         printf("2.Total length\n");
@@ -52,8 +52,8 @@ int main(){
 void append(){
     struct node *temp;
     temp =(struct node*)malloc(sizeof(struct node));
-    fflush(stdin);
-    system("cls");
+    fflush(stdin);//this is optional
+    system("cls");//optional
     printf("enter NODE data:");
     scanf("%d",&temp->data);
     printf("\nData inserted\n");
@@ -133,6 +133,7 @@ void delete(void){
 }
 void reverse(struct node *p)
 {
+    printf("\nreversing the list\n");
     struct node *q=NULL,*r=NULL;
     while(p!=NULL)
     {
@@ -142,4 +143,5 @@ void reverse(struct node *p)
         q->link=r;
     } 
     root=q;
+    getch();
 }
