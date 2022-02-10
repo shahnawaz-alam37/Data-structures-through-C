@@ -19,17 +19,12 @@ int main(){
                 temp = a[i];
                 a[i]=a[j];
                 a[j]=temp;
-            }
-            
+            }   
         }
-        
     }
     printf("priting sorted elements\n");
     for ( i = 0; i < n; i++)
     {
         printf("%d ",a[i]);
     }
-    
-    
-    
 }
