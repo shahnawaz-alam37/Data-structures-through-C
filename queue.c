@@ -9,7 +9,7 @@ int queue[10],data;
 int front=0,rare=0,opt;
 int main(){
     while (1){
-        system("cls");
+        system("cls");//this is optional
         printf("\nQUEUE OPERATIONS\n");
         printf("1.INSERT\n");
         printf("2.DELETE\n");
@@ -38,7 +38,7 @@ void insert(){
         printf("Queue is full\n");
     }
     else{
-        system("cls");
+        system("cls");//this is optional
         printf("Enter data to insert:");
         scanf("%d",&data);
         queue[rare]=data;
@@ -62,7 +62,7 @@ void delete(){
 }
 void display(){
     int i;
-    system("cls");
+    system("cls");//this is optional
     printf("printting queue elements..\n");
     for ( i = 0; i < rare; i++){
         printf("%d ",queue[i]);
