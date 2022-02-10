@@ -29,6 +29,4 @@ int main(){
     {
         printf("%d ",a[i]);
     }
-    
-    
 }
