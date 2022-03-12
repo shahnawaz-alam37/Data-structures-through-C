@@ -42,7 +42,7 @@ void insert(int d){
 }
 inorder(struct node*t){
     if (t->left){
-        inorder(t->left);
+        inorder(t->left);//getting error in the display
     }
     printf("%d",t->data);
     if(t->right){
@@ -74,5 +74,5 @@ int main(){
             break;
         }
     }
-    
+    return 0;
 }
