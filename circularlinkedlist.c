@@ -42,7 +42,8 @@ void main ()
             default:  
             printf("Please enter valid choice..");  
         }  
-    }  
+    }
+    getch();  
 }  
 void beginsert()  
 {  
