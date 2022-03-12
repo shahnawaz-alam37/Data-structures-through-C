@@ -28,6 +28,8 @@ int main()
             break;
         }
     }
+    getch();
+    return 0;
 }
 void insert(){
     if (top==9)
