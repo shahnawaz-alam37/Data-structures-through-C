@@ -35,5 +35,6 @@ void main(){
             printf("element not found");
         }
     }
+    getch();
 }
     
