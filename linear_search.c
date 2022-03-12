@@ -26,5 +26,6 @@ int main()
     if(found!=1){
             printf("search failed");
         }
-    getch();    
+    getch(); 
+    return 0;   
 }
