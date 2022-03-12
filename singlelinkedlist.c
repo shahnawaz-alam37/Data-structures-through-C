@@ -48,6 +48,8 @@ int main(){
             break;
         }
     }
+    getch();
+    return 0;
 }
 void append(){
     struct node *temp;
