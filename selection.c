@@ -29,4 +29,6 @@ int main(){
     {
         printf("%d ",a[i]);
     }
+    getch();
+    return 0;
 }
