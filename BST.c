@@ -40,7 +40,7 @@ void insert(int d){
         }
     }
 }
-inorder(struct node*t){
+int inorder(struct node*t){
     if (t->left){
         inorder(t->left);//getting error in the display
     }
