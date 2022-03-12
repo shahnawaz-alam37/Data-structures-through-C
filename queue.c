@@ -32,6 +32,8 @@ int main(){
             break;
         }
     }
+    getch();
+    return 0;
 }
 void insert(){
     if(rare==10){
